@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'mzakapp',
     'rest_framework',
 ]
-
+# use between routes and views
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
