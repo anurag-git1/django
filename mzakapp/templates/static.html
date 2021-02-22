@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Template views in url only</h3>
+    {% block content %}
+        Users:<p>
+        {% for dr in object_list %}
+            {{dr.first_name}}
+            {{dr.last_name}}</p>
+        {% endfor %}
+    {% endblock %}
+</body>
+</html>

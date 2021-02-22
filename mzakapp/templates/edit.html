@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+    <form method="POST" action="/user-update/{{user.id}}/">  
+            {% csrf_token %}  
+        <div>  
+        <br> 
+
+            <h3>Update Details</h3>  
+            
+            <label>User FirstName:</label>  
+            <div>  
+                <input type="text" name="first_name" id="id_first_name" required maxlength="20" value="{{ user.first_name }}"/>  
+            </div>   
+            <label>User LastName:</label>  
+            <div>  
+                <input type="text" name="last_name" id="id_last_name" required maxlength="100" value="{{ user.last_name }}" />  
+            </div>   
+            <label>User Email:</label>  
+            <div>  
+                <input type="email" name="email" id="id_email" required maxlength="100" value="{{ user.email }}" />  
+            </div>  
+            
+            <label>User Contact:</label>  
+            <div>  
+                <input type="text" name="contact" id="id_contact" required maxlength="15" value="{{ user.contact }}" />  
+            </div>  
+        
+            <div>  
+            
+            <button type="submit" class="btn btn-success">Update</button>  
+            </div>  
+            
+    
+        </div>  
+    </form>  
+</body>
+</html>

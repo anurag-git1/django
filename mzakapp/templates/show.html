@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show</title>
+</head>
+<body>
+    <table>  
+        <thead>  
+            <tr>  
+                <th>User Id</th>
+                <th>User FirstName</th>  
+                <th>User LastName</th>  
+                <th>User Email</th>  
+                <th>User Contact</th>  
+                <th>Actions</th>  
+            </tr>  
+        </thead>
+        <tbody>
+        {% for user in users %}  
+            <tr>  
+                <td>{{ user.id }}</td>
+                <td>{{ user.first_name }}</td>  
+                <td>{{ user.last_name }}</td>  
+                <td>{{ user.email }}</td>  
+                <td>{{ user.contact }}</td>  
+                <td>  
+                    <a href="/user-update/{{ user.id }}/"><span>update</span></a>  
+                    <a href="/user-delete/{{ user.id }}/">Delete</a>  
+                </td>  
+            </tr>
+        </tbody>  
+        {% endfor %}  
+        <a href="/" style="float: right;">Home</a>
+    </table>    
+</body>
+</html>
